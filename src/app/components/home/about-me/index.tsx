@@ -4,8 +4,6 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 const AboutMe = () => {
-  // Animation Variants for reusability
-
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -13,7 +11,7 @@ const AboutMe = () => {
       y: 0,
       transition: {
         duration: 0.6,
-        ease: "easeOut", // Now TS knows this is a valid Easing string
+        ease: "easeOut",
       },
     },
   };
@@ -29,7 +27,6 @@ const AboutMe = () => {
   return (
     <section>
       <div className="relative bg-softGray py-10 md:py-32 overflow-hidden">
-        {/* Background Image Motion */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -47,8 +44,7 @@ const AboutMe = () => {
         </motion.div>
 
         <div className="relative z-10">
-          <div className="container">
-            {/* Header Motion */}
+          <div className="container"> 
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -61,7 +57,6 @@ const AboutMe = () => {
             </motion.div>
 
             <div className="pt-10 xl:pt-16 flex gap-10 items-center justify-between">
-              {/* Left Image Motion */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9, x: -20 }}
                 whileInView={{ opacity: 1, scale: 1, x: 0 }}
@@ -78,7 +73,6 @@ const AboutMe = () => {
                 />
               </motion.div>
 
-              {/* Text Content Motion */}
               <motion.div
                 initial="hidden"
                 whileInView="visible"
@@ -106,7 +100,6 @@ const AboutMe = () => {
                   boundaries of what web and mobile technologies can achieve.
                 </motion.p>
 
-                {/* Counter Stats Motion */}
                 <motion.div
                   variants={staggerContainer}
                   className="grid grid-cols-3 py-10 xl:py-16 gap-5 border-b border-mistGray"
@@ -125,7 +118,6 @@ const AboutMe = () => {
                   ))}
                 </motion.div>
 
-                {/* Language Section Motion */}
                 <motion.div
                   variants={fadeInUp}
                   className="pt-8 xl:pt-14 flex flex-col sm:flex-row items-center gap-4"

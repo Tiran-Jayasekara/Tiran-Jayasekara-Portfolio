@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 
 const EducationSkills = () => {
-  // Your specific updated data
   const education = [
     {
       title: "BSc (Hons) in Software Engineering",
@@ -27,7 +26,6 @@ const EducationSkills = () => {
     "MS SQL", "MySQL", "MongoDB", "TypeScript", "Tailwind CSS", "Git"
   ];
 
-  // Animation Variants
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -49,7 +47,6 @@ const EducationSkills = () => {
     <section>
       <div className="border-t border-softGray overflow-hidden bg-white">
         <div className="container relative z-10">
-          {/* Vector Image with Motion */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +63,6 @@ const EducationSkills = () => {
           </motion.div>
 
           <div className="relative z-10 py-16 md:py-32">
-            {/* Header Motion */}
             <motion.div 
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +74,6 @@ const EducationSkills = () => {
             </motion.div>
 
             <div className="flex flex-col lg:flex-row items-start gap-10 xl:gap-20">
-              {/* Education List - Individual item triggers */}
               <div className="w-full lg:max-w-md flex flex-col gap-8">
                 {education.map((value, index) => (
                   <motion.div 
@@ -99,8 +94,7 @@ const EducationSkills = () => {
                   </motion.div>
                 ))}
               </div>
-
-              {/* Skills Tag Cloud with Staggered Motion */}
+              
               <div className="flex-1">
                 <motion.div 
                   variants={staggerContainer}

@@ -1,6 +1,4 @@
 "use client";
-import { getImgPath } from "@/utils/image";
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -17,7 +15,6 @@ const Contact = () => {
     message: "",
   });
 
-  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -26,9 +23,6 @@ const Contact = () => {
     },
   };
 
-// Option 1: Using a standard string (Recommended for simplicity)
-
-// Option 2: Using a custom Cubic Bezier (If you want that specific look)
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
   visible: { 
@@ -36,7 +30,7 @@ const itemVariants = {
     y: 0, 
     transition: { 
       duration: 0.5, 
-      ease: [0.16, 1, 0.3, 1] as const // "as const" fixes the TS(2322) error
+      ease: [0.16, 1, 0.3, 1] as const
     } 
   },
 };
@@ -93,7 +87,6 @@ const handleSubmit = async (e: React.FormEvent) => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32">
           
-          {/* Left Column: Info */}
           <motion.div 
             initial="hidden"
             whileInView="visible"
@@ -130,8 +123,7 @@ const handleSubmit = async (e: React.FormEvent) => {
                 </motion.div>
               ))}
             </div>
-
-            {/* Social Icons */}
+            
             <motion.div variants={itemVariants} className="flex gap-6 mt-4 text-slate-400">
                {['facebook', 'dribbble', 'instagram', 'linkedin', 'behance'].map((social) => (
                  <motion.div key={social} whileHover={{ y: -5, color: '#f97316' }}>
@@ -143,7 +135,6 @@ const handleSubmit = async (e: React.FormEvent) => {
             </motion.div>
           </motion.div>
 
-          {/* Right Column: Form */}
           <motion.div 
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -214,19 +205,10 @@ const handleSubmit = async (e: React.FormEvent) => {
 
               <motion.button 
                 type="submit" 
-                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-xl flex items-center gap-3 font-bold transition-all shadow-lg shadow-orange-200 group"
+                className="bg-orange-500 hover:bg-orange-600 text-white px-10 py-4 rounded-xl flex items-center gap-3 font-bold transition-all shadow-lg shadow-orange-200 group cursor-pointer"
               >
                 Submit
-                <motion.svg 
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ repeat: Infinity, duration: 2 }}
-                  className="w-5 h-5" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                </motion.svg>
+                
               </motion.button>
             </form>
           </motion.div>

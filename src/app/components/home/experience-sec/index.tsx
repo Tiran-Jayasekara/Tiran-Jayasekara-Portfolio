@@ -42,7 +42,6 @@ const ExperienceSec = () => {
     }
   ];
 
-  // We define the variants but will trigger them individually
   const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50 },
     visible: { 
@@ -56,7 +55,6 @@ const ExperienceSec = () => {
     <section>
       <div className="py-16 md:py-32 bg-white">
         <div className="container mx-auto px-4">
-          {/* Section Header */}
           <motion.div 
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -67,24 +65,21 @@ const ExperienceSec = () => {
             <p className="text-xl text-primary font-medium">( 02 )</p>
           </motion.div>
 
-          {/* Experience List Container - No longer handles the animation trigger */}
           <div className="space-y-12 md:space-y-20">
             {experiences.map((exp, index) => (
               <motion.div 
                 key={index} 
                 variants={itemVariants}
                 initial="hidden"
-                whileInView="visible" // Triggers individually
-                viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of item is visible
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.3 }}
                 className="grid grid-cols-1 md:grid-cols-12 gap-4 xl:gap-8 items-start relative"
               >
-                {/* Year and Title */}
                 <div className="md:col-span-3">
                   <h3 className="font-bold text-xl mb-1 text-black">{exp.year}</h3>
                   <h4 className="text-lg font-medium text-slate-600">{exp.title}</h4>
                 </div>
 
-                {/* Vertical Timeline Dot/Line */}
                 <div className="hidden md:flex md:col-span-1 justify-center relative self-stretch">
                   <motion.div 
                     initial={{ height: 0 }}
@@ -97,8 +92,6 @@ const ExperienceSec = () => {
                     {index === 0 && <div className="w-2 h-2 rounded-full bg-primary animate-pulse" />}
                   </div>
                 </div>
-
-                {/* Company and Description */}
                 <div className="md:col-span-8 pl-8 md:pl-0">
                   <div className="mb-3">
                     <h5 className="text-2xl text-black font-semibold">{exp.company}</h5>

@@ -5,22 +5,16 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
-  const stats = [
-    { label: "Experience", value: "4 Y." },
-    { label: "Projects Completed", value: "50+" },
-    { label: "Happy Clients", value: "28" },
-  ];
 
   return (
     <section className="relative overflow-hidden bg-white pt-10 pb-20 lg:pt-12">
       <div className="container mx-auto px-4">
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
           
-          {/* Left Column: Text Content */}
           <motion.div 
-            initial={{ opacity: 0, x: -50 }} // Start invisible and 50px to the left
-            animate={{ opacity: 1, x: 0 }}    // Move to original position
-            transition={{ duration: 0.8, ease: "easeOut" }} // Animation timing
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}   
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2 flex flex-col gap-6 text-center lg:text-left"
           >
             <div className="space-y-2">
@@ -28,7 +22,7 @@ const HeroSection = () => {
                 <span className="flex items-center justify-center lg:justify-start gap-4">
                   Hello
                   <motion.div 
-                    animate={{ rotate: [0, 20, 0, 20, 0] }} // Waving animation
+                    animate={{ rotate: [0, 20, 0, 20, 0] }}
                     transition={{ repeat: Infinity, duration: 2, repeatDelay: 1 }}
                     className="inline-block"
                   >
@@ -54,27 +48,11 @@ const HeroSection = () => {
               high-performance ERP systems and scalable full-stack applications
               through clean code and modern engineering practices.
             </p>
-
-            {/* Stats Row */}
-            {/* <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.5, duration: 1 }} // Appears slightly later
-              className="grid grid-cols-3 gap-4 pt-8"
-            >
-              {stats.map((stat, index) => (
-                <div key={index} className="bg-[#f5f0ff] p-4 rounded-xl text-center">
-                  <div className="text-xl md:text-3xl font-bold text-slate-800">{stat.value}</div>
-                  <div className="text-xs text-slate-500 mt-1 uppercase">{stat.label}</div>
-                </div>
-              ))}
-            </motion.div> */}
           </motion.div>
 
-          {/* Right Column: Image */}
           <motion.div 
-            initial={{ opacity: 0, scale: 0.8, x: 50 }} // Start smaller and to the right
-            animate={{ opacity: 1, scale: 1, x: 0 }}    // Snap into place
+            initial={{ opacity: 0, scale: 0.8, x: 50 }} 
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="w-full lg:w-1/2 relative"
           >
