@@ -60,7 +60,7 @@ const LatestWork = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 Projects
               </h2>
-              <p className="text-xl text-orange-500 font-medium">( 04 )</p>
+              <p className="text-xl text-orange-500 font-medium">( 05 )</p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 xl:gap-y-16">
