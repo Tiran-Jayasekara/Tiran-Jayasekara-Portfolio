@@ -39,8 +39,8 @@ const handleSubmit = async (e: React.FormEvent) => {
   e.preventDefault();
 
   emailjs.send(
-    'service_pu83cvs', 
-    'template_vbf00ne', 
+    'service_r23qjix', 
+    'template_fhi35cb', 
     {
       from_name: formData.name,
       from_email: formData.email,
@@ -48,7 +48,7 @@ const handleSubmit = async (e: React.FormEvent) => {
       message: formData.message,
       location: formData.location
     },
-    'xGJWqQYz6fRkk7ThV'
+    'l6v75i70BwEPtO2mI'
   )
   .then(() => {
     setSubmitted(true);
