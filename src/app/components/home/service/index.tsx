@@ -7,35 +7,24 @@ import { motion, Variants, AnimatePresence } from "framer-motion";
 
 const certificates = [
   {
-    title: "Automation Testing Certification",
-    issuer: "Imperial Institute",
-    year: "2024",
-    image: "/images/certificates/automation testing.jpeg",
+    title: "John keells IT service letter",
+    issuer: "John keells",
+    year: "2023",
+    image: "/images/service-letters/johnkeels.png",
   },
   {
-    title: "Advanced English Certificate",
-    issuer: "British way English Academy",
-    year: "2017",
-    image: "/images/certificates/english.jpeg",
+    title: "X-ONT software pvt ltd service letter",
+    issuer: "X-ONT software pvt ltd",
+    year: "2023",
+    image: "/images/service-letters/x-one-software.jpeg",
   },
   {
-    title: "Character Certificate",
-    issuer: "Kingswood College Kandy",
-    year: "2017",
-    image: "/images/certificates/character.jpeg",
+    title: "EMJ institute service letter",
+    issuer: "EMJ institute",
+    year: "2020",
+    image: "/images/service-letters/emj.jpeg",
   },
-  {
-    title: "BSC Hons Software Engineering Degree",
-    issuer: "Cardiff Metropolitan University",
-    year: "2022",
-    image: "/images/certificates/BSChons-software.jpeg",
-  },
-  {
-    title: "Higher Diploma and Diploma Software Engineering",
-    issuer: "National Institute of Business Management",
-    year: "2019",
-    image: "/images/certificates/high-diploma.jpeg",
-  },
+ 
 ];
 
 const fadeInUp: Variants = {
@@ -58,7 +47,7 @@ const staggerContainer: Variants = {
   },
 };
 
-const CertificatesSection = () => {
+const ServiceLetters = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
@@ -89,8 +78,8 @@ const CertificatesSection = () => {
               viewport={{ once: true }}
               className="flex items-center justify-between gap-2 border-b border-black pb-7 mb-9 xl:mb-16"
             >
-              <h2 className="text-3xl md:text-5xl font-bold">Certificates</h2>
-              <p className="text-xl text-primary font-medium">( 04 )</p>
+              <h2 className="text-3xl md:text-5xl font-bold">Service Letters</h2>
+              <p className="text-xl text-primary font-medium">( 05 )</p>
             </motion.div>
 
             <motion.div
@@ -193,4 +182,4 @@ const CertificatesSection = () => {
   );
 };
 
-export default CertificatesSection;
+export default ServiceLetters;

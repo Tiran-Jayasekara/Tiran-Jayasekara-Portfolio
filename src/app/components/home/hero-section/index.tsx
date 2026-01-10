@@ -12,7 +12,7 @@ const containerVariants: Variants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.08, // Time between each letter
+      staggerChildren: 0.08,
       delayChildren: 0.5,
     },
   },
@@ -31,10 +31,9 @@ const letterVariants: Variants = {
     transition: {
       duration: 0.5,
       ease: [0.22, 1, 0.36, 1],
-      // This forces the rotation to repeat along with the container
       repeat: Infinity,
       repeatType: "loop",
-      repeatDelay: 4, // This should be: (staggerChildren * name.length) + stayVisibleTime
+      repeatDelay: 4,
     },
   },
 };
@@ -79,7 +78,6 @@ const HeroSection = () => {
                     initial="hidden"
                     animate="visible"
                     className="inline-flex text-slate-900 [perspective:1000px]"
-                    // Remove the transition prop from here entirely
                   >
                     {name.split("").map((char, index) => (
                       <motion.span

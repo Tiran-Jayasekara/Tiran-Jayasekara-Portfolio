@@ -9,31 +9,52 @@ const LatestWork = () => {
     {
       title: "IManage ERP System",
       client: "Iteq Solutions pvt Ltd",
-      slug: "imanage-erp",
+      link: "https://github.com/randika-herath991/Imanage-ERP-SYSTEM-Frontend-NextJS-Backend-ExpressJS-MYSQL-Authentication.git",
       tech: "Next.js, NestJS, MySQL",
-      image: "/images/projects/imanage.png",
+      image: "/images/projects/imanage-erp-system.jpeg",
     },
     {
       title: "Hive ERP System",
       client: "Iteq Solutions pvt Ltd",
-      slug: "hive-erp",
+      link: "https://github.com/randika-herath991/HIVE-SYSTEM-ERP-Frontend-VueJS.git",
       tech: "Vue.js, Node.js, MySQL",
-      image: "/images/projects/hive.png",
+      image: "/images/projects/hive-erp.jpeg",
     },
     {
-      title: "Ventura ERP System",
-      client: "Inspiring Future Solutions",
-      slug: "ventura-erp",
-      tech: "Angular, .NET, MongoDB",
-      image: "/images/projects/ventura.png",
+      title: "Journey Mapper Traveling Application",
+      client: "Personal Project",
+      link: "https://github.com/randika-herath991/SRIMAL-Journey-Mapper-Frontend-ReactJS-Backend-ExpressJS-MYSQL.git",
+      tech: "Vue.js, Node.js, MySQL",
+      image: "/images/projects/travelling.jpeg",
     },
     {
       title: "ABC Bank Management",
       client: "Personal Project",
-      slug: "abc-bank",
+      link: "https://github.com/randika-herath991/ABC-Bank-Manage-Authentication-NodeJS-ReactJS-MomentJS-TailwindCSS-Frontend.git",
       tech: "React, Spring Boot, MySQL",
-      image: "/images/projects/abc-bank.jpg",
+      image: "/images/projects/abc-bank.jpeg",
     },
+    {
+      title: "Arduino Bluetooth Fan Controlling System",
+      client: "Personal Project",
+      link: "https://github.com/randika-herath991/Bluetooth-Fan-Controlling-System-Arduino.git",
+      tech: "Arduino, Bluetooth Module",
+      image: "/images/projects/arduino.jpeg",
+    },
+    {
+      title: "Traffic Sign Classify Machine Learning Application",
+      client: "Personal Project",
+      link: "https://github.com/randika-herath991/Traffic-Sign-Classify-Application-AI-ML-Python.git",
+      tech: "Python, TensorFlow, Keras",
+      image: "/images/projects/traffic-sign.jpeg",
+    },
+    // {
+    //   title: "Ventura ERP System",
+    //   client: "Inspiring Future Solutions",
+    //   link: "https://github.com/randika-herath991",
+    //   tech: "React, Node.js, MongoDB",
+    //   image: "/images/projects/ventura.png",
+    // },
   ];
 
   const cardVariants: Variants = {
@@ -60,7 +81,7 @@ const LatestWork = () => {
               <h2 className="text-3xl md:text-5xl font-bold text-black">
                 Projects
               </h2>
-              <p className="text-xl text-orange-500 font-medium">( 05 )</p>
+              <p className="text-xl text-orange-500 font-medium">( 06 )</p>
             </motion.div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-10 xl:gap-y-16">
@@ -85,7 +106,8 @@ const LatestWork = () => {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
 
                     <Link
-                      href={`https://www.linkedin.com/in/srimal-herath-43903a3451`}
+                      href={`${value.link}`}
+                      target="_blank" rel="noopener noreferrer"
                       className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center backdrop-blur-sm"
                     >
                       <motion.div
@@ -111,7 +133,7 @@ const LatestWork = () => {
                   </div>
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center justify-between">
-                      <Link href={`/projects/${value.slug}`}>
+                      <Link href={`${value.link}`} target="_blank" rel="noopener noreferrer">
                         <h5 className="text-2xl font-bold group-hover:text-orange-600 transition-colors text-black">
                           {value.title}
                         </h5>

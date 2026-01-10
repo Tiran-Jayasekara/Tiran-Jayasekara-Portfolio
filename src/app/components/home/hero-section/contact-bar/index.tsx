@@ -80,7 +80,6 @@ const ContactBar = () => {
               )}
             </div>
 
-            {/* Social Items */}
             <div className="flex items-center justify-center md:justify-end gap-4 md:gap-2.5">
               {contactBarData?.socialItems?.map((value: any, index: number) => (
                 <motion.div
