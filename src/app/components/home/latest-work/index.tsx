@@ -62,6 +62,13 @@ const LatestWork = () => {
     tech: "Next.js, PWA, Firebase, Express.js, MongoDB",
     image: "/images/projects/udadumbara.png",
   },
+  {
+    title: "Kelsen Wordaddin Application",
+    client: "Kelsen Group",
+    link: "https://www.linkedin.com/in/tiran-jayasekara-50796028b/",
+    tech: "React Js , Node.js, Nest js, PostgreSQL, Microservices , lanchain, AWS",
+    image: "/images/projects/kelsen.png",
+  },
 ];
   const cardVariants: Variants = {
     hidden: { opacity: 0, scale: 0.95, y: 20 },
